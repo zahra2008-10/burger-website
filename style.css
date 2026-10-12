@@ -1,0 +1,1268 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #000;
+  color: white;
+  font-family: Arial, sans-serif;
+  animation: fadeIn 1s ease-in-out;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #000;
+}
+
+/* =========================================================
+   STARS
+========================================================= */
+
+#stars {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+
+  background-image:
+    radial-gradient(circle, white 1px, transparent 1px),
+    radial-gradient(circle, white 1px, transparent 1px),
+    radial-gradient(circle, white 1px, transparent 1px),
+    radial-gradient(circle, white 1px, transparent 1px);
+
+  background-size:
+    90px 90px,
+    140px 140px,
+    190px 190px,
+    240px 240px;
+
+  background-position:
+    10px 20px,
+    50px 80px,
+    120px 40px,
+    30px 150px;
+
+  opacity: 0.6;
+  animation: twinkle 3s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.35;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 0.35;
+  }
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+  position: relative;
+  z-index: 10;
+
+  width: 100%;
+  padding: 25px 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  animation: slideInFromTop 1s ease-in-out;
+}
+
+/* Logo */
+
+.navbar .logo {
+  width: 65px;
+  height: auto;
+
+  animation: rotateIn 1s ease-in-out;
+}
+
+/* Center Navigation */
+
+.center-nav {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.center-nav a {
+  position: relative;
+
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+
+  transition: all 0.3s ease;
+
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Active link */
+
+.center-nav a.active {
+  color: rgb(255, 140, 0);
+}
+
+/* Underline */
+
+.center-nav a::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+
+  width: 100%;
+  height: 2px;
+
+  background: rgb(255, 140, 0);
+
+  transform: scaleX(0);
+  transform-origin: center;
+
+  transition: transform 0.3s ease;
+}
+
+.center-nav a:hover::before,
+.center-nav a.active::before {
+  transform: scaleX(1);
+}
+
+/* Hover */
+
+.center-nav a:hover {
+  color: rgb(255, 140, 0);
+  text-shadow: 0 0 20px rgb(255, 140, 0);
+}
+
+/* Social icons */
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.social a {
+  color: white;
+  font-size: 1.25rem;
+
+  transition: all 0.3s ease;
+
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.social a:hover {
+  color: rgb(255, 140, 0);
+  transform: translateY(-3px);
+  text-shadow: 0 0 20px rgb(255, 140, 0);
+}
+
+/* =========================================================
+   MAIN TEXT
+========================================================= */
+
+.text {
+  position: relative;
+  z-index: 5;
+
+  width: 50%;
+  margin-left: 11rem;
+  margin-top: 8rem;
+
+  letter-spacing: 1px;
+
+  animation: fadeIn 1s ease-in-out;
+}
+
+.text h1 {
+  margin-bottom: 20px;
+
+  font-size: 4rem;
+  line-height: 1.05;
+  font-weight: 800;
+  font-family: Arial, sans-serif;
+
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.text p {
+  width: 90%;
+  max-width: 600px;
+
+  margin-bottom: 35px;
+
+  color: #d5d5d5;
+  font-size: 1rem;
+  line-height: 1.7;
+
+  animation: fadeInUp 1s ease-in-out 0.3s backwards;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.buttons {
+  display: flex;
+  gap: 15px;
+
+  animation: fadeInUp 1s ease-in-out 0.5s backwards;
+}
+
+.btn {
+  display: inline-block;
+
+  padding: 13px 25px;
+
+  color: white;
+
+  border: 2px solid white;
+  border-radius: 6px;
+
+  transition: all 0.4s ease;
+}
+
+.btn:hover {
+  color: white;
+  background-color: rgb(255, 140, 0);
+  border-color: rgb(255, 140, 0);
+
+  box-shadow:
+    0 0 10px rgb(255, 140, 0),
+    0 0 25px rgba(255, 140, 0, 0.5);
+
+  transform: translateY(-3px);
+}
+
+/* =========================================================
+   BURGER BOTTOM IMAGES
+========================================================= */
+
+.burger {
+  position: absolute;
+  z-index: 6;
+
+  bottom: 20px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 70%;
+  max-width: 850px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 15px;
+
+  animation: slideInFromBottom 1s ease-in-out 1s backwards;
+}
+
+.burger img {
+  width: 17%;
+  height: 90px;
+
+  object-fit: contain;
+
+  border: 2px solid white;
+  border-radius: 8px;
+
+  padding: 5px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  animation: fadeInUp 1s ease-in-out 1.2s backwards;
+}
+
+.burger img:hover {
+  transform: translateY(-10px) scale(1.08);
+
+  box-shadow:
+    0 0 15px rgba(255, 255, 255, 0.8),
+    0 0 30px rgba(255, 140, 0, 0.5);
+
+  border-color: rgb(255, 140, 0);
+}
+
+/* =========================================================
+   MAIN BURGER
+========================================================= */
+
+.burger-toggle {
+  position: absolute;
+  z-index: 3;
+
+  right: 30px;
+  top: 100px;
+
+  width: 48%;
+  height: 65%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: none;
+}
+
+.burger-toggle img {
+  display: none;
+
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+
+  object-fit: contain;
+
+  filter: drop-shadow(20px 30px 35px rgba(255, 140, 0, 0.25));
+
+  animation: fadeInUp 1s ease-in-out 1.5s backwards;
+}
+
+.burger-toggle img.active {
+  display: block;
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    transform: translate(-50%, 100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateIn {
+  from {
+    transform: rotate3d(0, 0, 1, -200deg);
+    opacity: 0;
+  }
+
+  to {
+    transform: rotate3d(0, 0, 1, 0);
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+========================================================= */
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 20px 30px;
+  }
+
+  .center-nav {
+    gap: 18px;
+  }
+
+  .text {
+    margin-left: 40px;
+    margin-top: 7rem;
+    width: 55%;
+  }
+
+  .text h1 {
+    font-size: 3rem;
+  }
+
+  .burger-toggle {
+    width: 45%;
+    right: 10px;
+  }
+
+  .burger {
+    width: 90%;
+  }
+}
+
+@media (max-width: 650px) {
+  body {
+    overflow: auto;
+  }
+
+  header {
+    min-height: 100vh;
+    height: auto;
+  }
+
+  .navbar {
+    padding: 20px;
+  }
+
+  .center-nav {
+    display: none;
+  }
+
+  .social {
+    gap: 15px;
+  }
+
+  .text {
+    width: 90%;
+    margin: 5rem auto 0;
+    text-align: center;
+  }
+
+  .text h1 {
+    font-size: 2.5rem;
+  }
+
+  .text p {
+    width: 100%;
+    margin: 20px auto 30px;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  .burger-toggle {
+    position: relative;
+    top: auto;
+    right: auto;
+
+    width: 90%;
+    height: auto;
+
+    margin: 30px auto;
+  }
+
+  .burger-toggle img {
+    width: 90%;
+  }
+
+  .burger {
+    position: relative;
+
+    bottom: auto;
+    left: auto;
+
+    transform: none;
+
+    width: 90%;
+
+    margin: 20px auto;
+  }
+
+  .burger img {
+    height: 70px;
+  }
+}
+
+/* ****************************************************************************************** */
+
+/* =========================================================
+   ABOUT SECTION
+========================================================= */
+
+.about {
+  min-height: 700px;
+  padding: 100px 11%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 70px;
+
+  background: #000;
+  color: white;
+}
+
+.about-image {
+  width: 45%;
+  position: relative;
+}
+
+.about-image::before {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  background: rgb(255, 140, 0);
+
+  filter: blur(120px);
+
+  opacity: 0.18;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.about-image img {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  max-width: 550px;
+
+  display: block;
+  margin: auto;
+
+  object-fit: contain;
+
+  filter: drop-shadow(20px 30px 35px rgba(255, 140, 0, 0.25));
+}
+
+.about-content {
+  width: 50%;
+}
+
+.section-tag {
+  display: inline-block;
+
+  color: rgb(255, 140, 0);
+
+  font-size: 14px;
+  font-weight: bold;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 12px;
+}
+
+.about-content h2 {
+  font-size: 3rem;
+
+  line-height: 1.1;
+
+  margin-bottom: 25px;
+
+  font-weight: 800;
+}
+
+.about-content h2 span {
+  color: rgb(255, 140, 0);
+}
+
+.about-content > p {
+  color: #d5d5d5;
+
+  font-size: 1rem;
+
+  line-height: 1.7;
+
+  margin-bottom: 15px;
+}
+
+.about-info {
+  display: flex;
+
+  gap: 15px;
+
+  margin: 30px 0;
+}
+
+.about-info div {
+  flex: 1;
+
+  padding: 18px;
+
+  border: 1px solid #333;
+
+  border-radius: 10px;
+
+  transition: all 0.3s ease;
+}
+
+.about-info div:hover {
+  border-color: rgb(255, 140, 0);
+
+  transform: translateY(-6px);
+
+  box-shadow: 0 0 15px rgba(255, 140, 0, 0.15);
+}
+
+.about-info i {
+  color: rgb(255, 140, 0);
+
+  font-size: 24px;
+
+  margin-bottom: 12px;
+}
+
+.about-info h3 {
+  font-size: 15px;
+
+  margin-bottom: 7px;
+}
+
+.about-info p {
+  color: #888;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+.main-btn {
+  display: inline-block;
+
+  padding: 13px 25px;
+
+  background: rgb(255, 140, 0);
+
+  color: #000;
+
+  border-radius: 6px;
+
+  font-weight: bold;
+
+  transition: all 0.3s ease;
+}
+
+.main-btn:hover {
+  background: white;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 0 15px rgba(255, 140, 0, 0.5);
+}
+
+/* =========================================================
+   MENU SECTION
+========================================================= */
+
+.menu-section {
+  padding: 100px 11%;
+
+  background: #050505;
+
+  color: white;
+}
+
+.section-heading {
+  text-align: center;
+
+  margin-bottom: 50px;
+}
+
+.section-heading h2 {
+  font-size: 3rem;
+
+  line-height: 1.1;
+
+  margin-bottom: 15px;
+}
+
+.section-heading h2 span {
+  color: rgb(255, 140, 0);
+}
+
+.section-heading p {
+  color: #aaa;
+
+  max-width: 600px;
+
+  margin: auto;
+
+  line-height: 1.7;
+}
+
+/* Menu filter */
+
+.menu-buttons {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 45px;
+
+  flex-wrap: wrap;
+}
+
+.menu-filter {
+  padding: 10px 25px;
+
+  color: white;
+
+  background: transparent;
+
+  border: 1px solid #444;
+
+  border-radius: 30px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.menu-filter:hover,
+.menu-filter.active {
+  background: rgb(255, 140, 0);
+
+  color: #000;
+
+  border-color: rgb(255, 140, 0);
+}
+
+/* Food grid */
+
+.menu-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+/* Food card */
+
+.food-card {
+  background: #0b0b0b;
+
+  border: 1px solid #292929;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  transition: all 0.3s ease;
+}
+
+.food-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgb(255, 140, 0);
+
+  box-shadow: 0 10px 35px rgba(255, 140, 0, 0.1);
+}
+
+/* Food image */
+
+.food-image {
+  width: 100%;
+
+  height: 220px;
+
+  overflow: hidden;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.food-image img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: contain;
+
+  transition: transform 0.5s ease;
+}
+
+.food-card:hover .food-image img {
+  transform: scale(1.08);
+}
+
+/* Drink image */
+
+.food-image .drink-image {
+  width: 120px;
+
+  height: 120px;
+
+  object-fit: contain;
+}
+
+.food-info {
+  padding: 22px;
+}
+
+.food-info h3 {
+  font-size: 20px;
+
+  margin-bottom: 10px;
+}
+
+.food-info p {
+  color: #888;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  min-height: 45px;
+}
+
+.food-bottom {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-top: 20px;
+}
+
+.food-bottom span {
+  color: rgb(255, 140, 0);
+
+  font-size: 20px;
+
+  font-weight: bold;
+}
+
+/* Add button */
+
+.add-cart {
+  width: 38px;
+  height: 38px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: rgb(255, 140, 0);
+
+  color: #000;
+
+  font-size: 22px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.add-cart:hover {
+  background: white;
+
+  transform: scale(1.1);
+}
+
+/* Shop Add To Cart button */
+
+.shop-btn {
+  width: auto;
+
+  padding: 11px 20px;
+
+  border-radius: 6px;
+
+  font-size: 14px;
+
+  font-weight: bold;
+}
+
+/* =========================================================
+   SHOP SECTION
+========================================================= */
+
+.shop {
+  min-height: 700px;
+
+  padding: 100px 11%;
+
+  background: #000;
+
+  color: white;
+}
+
+.shop-container {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 30px;
+}
+
+.deal-card {
+  display: flex;
+
+  align-items: center;
+
+  background: #0b0b0b;
+
+  border: 1px solid #292929;
+
+  border-radius: 15px;
+
+  overflow: hidden;
+
+  transition: all 0.3s ease;
+}
+
+.deal-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgb(255, 140, 0);
+
+  box-shadow: 0 10px 35px rgba(255, 140, 0, 0.1);
+}
+
+.deal-image {
+  width: 45%;
+
+  height: 300px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.deal-image img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: contain;
+}
+
+.deal-content {
+  width: 55%;
+
+  padding: 25px;
+}
+
+.deal-label {
+  color: rgb(255, 140, 0);
+
+  font-size: 11px;
+
+  font-weight: bold;
+
+  letter-spacing: 2px;
+}
+
+.deal-content h3 {
+  font-size: 22px;
+
+  margin: 12px 0;
+}
+
+.deal-content p {
+  color: #888;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+.price {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin: 20px 0;
+}
+
+.old-price {
+  color: #666;
+
+  text-decoration: line-through;
+}
+
+.new-price {
+  color: rgb(255, 140, 0);
+
+  font-size: 23px;
+
+  font-weight: bold;
+}
+
+.shop-btn {
+  width: auto;
+
+  height: auto;
+
+  background: rgb(255, 140, 0);
+
+  color: #000;
+
+  border: none;
+
+  border-radius: 6px;
+
+  padding: 11px 18px;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.shop-btn:hover {
+  background: white;
+
+  transform: translateY(-3px);
+}
+
+/* Cart */
+
+.cart-box {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 12px;
+
+  width: fit-content;
+
+  margin: 45px auto 0;
+
+  padding: 13px 25px;
+
+  border: 1px solid #444;
+
+  border-radius: 30px;
+}
+
+.cart-box i {
+  color: rgb(255, 140, 0);
+}
+
+.cart-box strong {
+  color: rgb(255, 140, 0);
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+  padding: 55px 11%;
+
+  background: #050505;
+
+  border-top: 1px solid #222;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.footer-logo h2 {
+  font-size: 24px;
+}
+
+.footer-logo h2 span {
+  color: rgb(255, 140, 0);
+}
+
+.footer-logo p {
+  color: #777;
+
+  margin-top: 8px;
+
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+
+  gap: 30px;
+}
+
+.footer-links a {
+  color: #aaa;
+
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: rgb(255, 140, 0);
+}
+
+.social-icons {
+  display: flex;
+
+  gap: 12px;
+}
+
+.social-icons a {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  border: 1px solid #333;
+
+  border-radius: 50%;
+
+  color: white;
+
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: rgb(255, 140, 0);
+
+  border-color: rgb(255, 140, 0);
+
+  color: #000;
+}
+
+/* =========================================================
+   SECTION RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+  .about {
+    flex-direction: column;
+  }
+
+  .about-image,
+  .about-content {
+    width: 100%;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .shop-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+  .about,
+  .menu-section,
+  .shop {
+    padding: 70px 6%;
+  }
+
+  .section-heading h2,
+  .about-content h2 {
+    font-size: 2.2rem;
+  }
+
+  .about-info {
+    flex-direction: column;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .deal-card {
+    flex-direction: column;
+  }
+
+  .deal-image,
+  .deal-content {
+    width: 100%;
+  }
+
+  .deal-image {
+    height: 250px;
+  }
+
+  .footer {
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+
+    justify-content: center;
+  }
+}

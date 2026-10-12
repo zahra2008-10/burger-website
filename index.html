@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Burger Website</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <!-- =====================================================
+         HOME / HERO
+    ====================================================== -->
+
+    <header id="home">
+      <!-- Stars -->
+      <div id="stars"></div>
+
+      <!-- Navbar -->
+      <nav class="navbar">
+        <img src="imgs/logo.png" alt="Burger Logo" class="logo" />
+
+        <div class="center-nav">
+          <a href="#home" class="active">Home</a>
+
+          <a href="#menu">Menu</a>
+
+          <a href="#about">About</a>
+
+          <a href="#shop">Shop</a>
+        </div>
+
+        <div class="social">
+          <a href="#">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
+
+          <a href="#shop">
+            <i class="fa-solid fa-cart-plus"></i>
+          </a>
+
+          <a href="#home">
+            <i class="fa-solid fa-house"></i>
+          </a>
+        </div>
+      </nav>
+
+      <!-- Main Text -->
+      <div class="text">
+        <h1>
+          THE ULTIMATE <br />
+          BURGER HOUSE
+        </h1>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi
+          neque magni, rem modi quos dignissimos voluptate iste ab inventore
+          quae incidunt asperiores doloribus mollitia laborum laboriosam, fuga
+          minima nemo soluta?
+        </p>
+
+        <div class="buttons">
+          <a href="#menu" class="btn"> Order Now </a>
+
+          <a href="#about" class="btn"> View More </a>
+        </div>
+      </div>
+
+      <!-- Burger Images -->
+      <div class="burger">
+        <img src="imgs/burger.png" alt="Burger" />
+
+        <img src="imgs/pngwing.com (12).png" alt="Burger" />
+
+        <img src="imgs/buger2.png" alt="Burger" />
+
+        <img src="imgs/Flying Burger PNG Image - 2084x2084.png" alt="Burger" />
+
+        <img src="imgs/pngwing.com (16).png" alt="Burger" />
+      </div>
+
+      <!-- Main Burger -->
+      <div class="burger-toggle">
+        <img
+          src="imgs/Flying Burger PNG Image - 2084x2084.png"
+          alt="Main Burger"
+          class="active"
+        />
+      </div>
+    </header>
+
+    <!-- =====================================================
+         ABOUT SECTION
+    ====================================================== -->
+
+    <section class="about" id="about">
+      <div class="about-image">
+        <img
+          src="imgs/Flying Burger PNG Image - 2084x2084.png"
+          alt="Delicious Burger"
+        />
+      </div>
+
+      <div class="about-content">
+        <span class="section-tag"> ABOUT US </span>
+
+        <h2>
+          WE MAKE
+          <span>BURGERS</span>
+          WITH PASSION
+        </h2>
+
+        <p>
+          Welcome to our burger house. We prepare delicious burgers using fresh
+          ingredients, crispy vegetables and perfectly grilled meat.
+        </p>
+
+        <p>
+          Every burger is prepared with care and served fresh. Our goal is
+          simple — great food, great taste and a great experience for every
+          customer.
+        </p>
+
+        <div class="about-info">
+          <div>
+            <i class="fa-solid fa-burger"></i>
+
+            <h3>Fresh Food</h3>
+
+            <p>Fresh ingredients every day.</p>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-fire"></i>
+
+            <h3>Hot & Fresh</h3>
+
+            <p>Prepared fresh for you.</p>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-truck-fast"></i>
+
+            <h3>Fast Delivery</h3>
+
+            <p>Quick delivery to your door.</p>
+          </div>
+        </div>
+
+        <a href="#menu" class="main-btn"> Explore Menu </a>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         MENU SECTION
+    ====================================================== -->
+
+    <section class="menu-section" id="menu">
+      <div class="section-heading">
+        <span class="section-tag"> OUR MENU </span>
+
+        <h2>
+          CHOOSE YOUR
+          <span>FAVORITE</span>
+        </h2>
+
+        <p>
+          Delicious burgers and tasty food made specially for burger lovers.
+        </p>
+      </div>
+
+      <!-- Filter Buttons -->
+
+      <div class="menu-buttons">
+        <button class="menu-filter active" data-category="all">All</button>
+
+        <button class="menu-filter" data-category="burger">Burgers</button>
+
+        <button class="menu-filter" data-category="chicken">Chicken</button>
+
+        <button class="menu-filter" data-category="fries">Fries</button>
+
+        <button class="menu-filter" data-category="drink">Drinks</button>
+      </div>
+
+      <!-- Food Cards -->
+
+      <div class="menu-grid">
+        <!-- Card 1 -->
+
+        <div class="food-card" data-category="burger">
+          <div class="food-image">
+            <img src="imgs/burger.png" alt="Classic Burger" />
+          </div>
+
+          <div class="food-info">
+            <h3>Classic Burger</h3>
+
+            <p>
+              Juicy beef burger with fresh lettuce, tomato and special sauce.
+            </p>
+
+            <div class="food-bottom">
+              <span> $8.99 </span>
+
+              <button class="add-cart">+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+
+        <div class="food-card" data-category="burger">
+          <div class="food-image">
+            <img src="imgs/pngwing.com (12).png" alt="Cheese Burger" />
+          </div>
+
+          <div class="food-info">
+            <h3>Cheese Burger</h3>
+
+            <p>Delicious burger with melted cheese and fresh vegetables.</p>
+
+            <div class="food-bottom">
+              <span> $10.99 </span>
+
+              <button class="add-cart">+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+
+        <div class="food-card" data-category="chicken">
+          <div class="food-image">
+            <img src="imgs/buger2.png" alt="Chicken Burger" />
+          </div>
+
+          <div class="food-info">
+            <h3>Chicken Burger</h3>
+
+            <p>Crispy chicken with lettuce, tomato and creamy special sauce.</p>
+
+            <div class="food-bottom">
+              <span> $9.49 </span>
+
+              <button class="add-cart">+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+
+        <div class="food-card" data-category="burger">
+          <div class="food-image">
+            <img
+              src="imgs/Flying Burger PNG Image - 2084x2084.png"
+              alt="Double Burger"
+            />
+          </div>
+
+          <div class="food-info">
+            <h3>Double Burger</h3>
+
+            <p>Two juicy beef patties with cheese and our special sauce.</p>
+
+            <div class="food-bottom">
+              <span> $12.99 </span>
+
+              <button class="add-cart">+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+
+        <div class="food-card" data-category="fries">
+          <div class="food-image">
+            <img src="imgs/pngwing.com (16).png" alt="French Fries" />
+          </div>
+
+          <div class="food-info">
+            <h3>Crispy Fries</h3>
+
+            <p>Golden crispy fries with delicious seasoning.</p>
+
+            <div class="food-bottom">
+              <span> $4.99 </span>
+
+              <button class="add-cart">+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+
+        <div class="food-card" data-category="drink">
+          <div class="food-image">
+            <img
+              src="imgs/code-drink.jfif"
+              alt="Cold Drink"
+              class="drink-image"
+            />
+          </div>
+
+          <div class="food-info">
+            <h3>Cold Drink</h3>
+
+            <p>Refreshing cold drink served perfectly chilled.</p>
+
+            <div class="food-bottom">
+              <span> $2.99 </span>
+
+              <button class="add-cart">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         SHOP SECTION
+    ====================================================== -->
+
+    <section class="shop" id="shop">
+      <div class="section-heading">
+        <span class="section-tag"> OUR SHOP </span>
+
+        <h2>
+          SPECIAL
+          <span>DEALS</span>
+        </h2>
+
+        <p>Enjoy our special burger combinations and save more.</p>
+      </div>
+
+      <div class="shop-container">
+        <!-- Deal 1 -->
+
+        <div class="deal-card">
+          <div class="deal-image">
+            <img
+              src="imgs/Flying Burger PNG Image - 2084x2084.png"
+              alt="Burger Combo"
+            />
+          </div>
+
+          <div class="deal-content">
+            <span class="deal-label"> BEST SELLER </span>
+
+            <h3>Ultimate Burger Combo</h3>
+
+            <p>Burger + French Fries + Cold Drink</p>
+
+            <div class="price">
+              <span class="old-price"> $18.99 </span>
+
+              <span class="new-price"> $14.99 </span>
+            </div>
+
+            <button class="shop-btn add-cart">Add To Cart</button>
+          </div>
+        </div>
+
+        <!-- Deal 2 -->
+
+        <div class="deal-card">
+          <div class="deal-image">
+            <img src="imgs/burger.png" alt="Double Burger Combo" />
+          </div>
+
+          <div class="deal-content">
+            <span class="deal-label"> SPECIAL DEAL </span>
+
+            <h3>Double Burger Combo</h3>
+
+            <p>Double Burger + Fries + Drink</p>
+
+            <div class="price">
+              <span class="old-price"> $21.99 </span>
+
+              <span class="new-price"> $16.99 </span>
+            </div>
+
+            <button class="shop-btn add-cart">Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cart -->
+
+      <div class="cart-box">
+        <i class="fa-solid fa-cart-shopping"></i>
+
+        <span>
+          Cart:
+          <strong id="cart-count">0</strong>
+        </span>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+      <div class="footer-logo">
+        <h2>BURGER <span>KING</span></h2>
+
+        <p>The ultimate burger experience.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#home"> Home </a>
+
+        <a href="#menu"> Menu </a>
+
+        <a href="#about"> About </a>
+
+        <a href="#shop"> Shop </a>
+      </div>
+
+      <div class="social-icons">
+        <a href="#">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <a href="#">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="#">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
